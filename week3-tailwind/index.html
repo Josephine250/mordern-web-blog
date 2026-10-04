@@ -1,45 +1,127 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>week3-tailwind</title>
+    <title>Digital Ministry | Online Church Service</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <!-- HERO BANNER -->
-    <nav>
-      <!-- HERO BANNER -->
-      <header class="bg-slate-900 py-20 md:py-28">
-         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <!-- Badge -->
-           <span class="inline-block py-1 px-3 rounded-full bg-blue-900/50 text-blue-200 text-sm font-semibold tracking-wider mb-6 border border-blue-700/50">
-           LATEST INSIGHTS
-          </span>
+  <body class="bg-slate-50 font-sans antialiased text-slate-800 flex flex-col min-h-screen">
+   
+    <header class="bg-slate-900 py-20 md:py-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         
-            <!-- Heading -->
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-6">
-            Empowering the <span class="text-blue-500">Digital Ministry</span>
-           </h1>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-6">
+          Equipping the <span class="text-blue-500">Modern Church</span>
+        </h1>
         
-            <!-- Tagline -->
-          <p class="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-slate-400 mb-10">
-             Discover digital ministry strategies, live-streaming setups for your sanctuary, and virtual discipleship tools to extend your congregation's fellowship and share the gospel across the globe.
-          </p>
+        <p class="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-slate-400 mb-10">
+          Practical strategies, streaming setups, and digital discipleship methods to help your congregation thrive online.
+        </p>
         
-           <!-- Call-to-Action Button -->
-          <a href="#articles" class="inline-flex items-center justify-center px-8 py-3.5 border border-transparent text-base font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-500 transition-colors shadow-lg hover:shadow-blue-500/25">
-            Read Articles
-          <!-- Small arrow SVG inside the button -->
-          <svg class="ml-2 -mr-1 w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-          </svg>
-           </a>
-        </div>
-      </header>
-    </nav>  
-    <div id="app"></div>
-    
-    <script type="module" src="/src/main.js"></script>
+        <a href="#articles" class="inline-flex items-center justify-center px-8 py-3.5 rounded-lg text-white bg-blue-600 hover:bg-blue-500 transition-colors shadow-lg">
+          Start Reading
+        </a>
+      </div>
+    </header>
+
+    <main id="articles" class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      
+      <!-- THIS IS THE GRID: sm:grid-cols-3 forces 3 cards per row on small screens and up -->
+      <div class="grid grid-cols-3 gap-8">
+        
+        <!-- Blog Card 1 -->
+        <article class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 flex flex-col">
+          <h3 class="text-xl font-bold text-slate-900 mb-4 line-clamp-2">
+            Creating Meaningful Digital Connections
+          </h3>
+          <div class="relative h-48 mb-4 rounded-xl overflow-hidden bg-slate-100">
+            <img src="image/pexels-katerina-holmes-5905749.jpg" alt="Church Worship" class="w-full h-full object-cover">
+            <span class="absolute bottom-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-sm">Digital Ministry</span>
+          </div>
+          <div class="flex items-center gap-4 text-sm text-slate-500 font-medium mt-auto">
+            <span>Oct 12, 2026</span>
+            <span>• 5 min read</span>
+          </div>
+        </article>
+
+        <!-- Blog Card 2 -->
+        <article class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 flex flex-col">
+          <h3 class="text-xl font-bold text-slate-900 mb-4 line-clamp-2">
+            Budget Streaming Gear for Sanctuaries
+          </h3>
+          <div class="relative h-48 mb-4 rounded-xl overflow-hidden bg-slate-100">
+            <img src="image/pexels-cristian-rojas-7261084.jpg" alt="Church Interior" class="w-full h-full object-cover">
+            <span class="absolute bottom-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-sm">Tech Setup</span>
+          </div>
+          <div class="flex items-center gap-4 text-sm text-slate-500 font-medium mt-auto">
+            <span>Oct 10, 2026</span>
+            <span>• 7 min read</span>
+          </div>
+        </article>
+
+        <!-- Blog Card 3 -->
+        <article class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 flex flex-col">
+          <h3 class="text-xl font-bold text-slate-900 mb-4 line-clamp-2">
+            Managing Virtual Small Groups Effectively
+          </h3>
+          <div class="relative h-48 mb-4 rounded-xl overflow-hidden bg-slate-100">
+            <img src="image/pexels-cottonbro-5486096.jpg" alt="Bible Study" class="w-full h-full object-cover">
+            <span class="absolute bottom-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-sm">Community</span>
+          </div>
+          <div class="flex items-center gap-4 text-sm text-slate-500 font-medium mt-auto">
+            <span>Oct 05, 2026</span>
+            <span>• 4 min read</span>
+          </div>
+        </article>
+
+        <!-- Blog Card 4 -->
+        <article class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 flex flex-col">
+          <h3 class="text-xl font-bold text-slate-900 mb-4 line-clamp-2">
+            Secure Online Tithing & Stewardship
+          </h3>
+          <div class="relative h-48 mb-4 rounded-xl overflow-hidden bg-slate-100">
+            <img src="image/pexels-towfiqu-barbhuiya-3440682-10972839.jpg" alt="Cross" class="w-full h-full object-cover">
+            <span class="absolute bottom-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-sm">Finance</span>
+          </div>
+          <div class="flex items-center gap-4 text-sm text-slate-500 font-medium mt-auto">
+            <span>Sep 28, 2026</span>
+            <span>• 6 min read</span>
+          </div>
+        </article>
+
+        <!-- Blog Card 5 -->
+        <article class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 flex flex-col">
+          <h3 class="text-xl font-bold text-slate-900 mb-4 line-clamp-2">
+            Engaging Worship Through Screens
+          </h3>
+          <div class="relative h-48 mb-4 rounded-xl overflow-hidden bg-slate-100">
+            <img src="image/pexels-caleboquendo-34622659 (1).jpg" alt="Congregation" class="w-full h-full object-cover">
+            <span class="absolute bottom-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-sm">Worship</span>
+          </div>
+          <div class="flex items-center gap-4 text-sm text-slate-500 font-medium mt-auto">
+            <span>Sep 22, 2026</span>
+            <span>• 5 min read</span>
+          </div>
+        </article>
+
+        <!-- Blog Card 6 -->
+        <article class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 flex flex-col">
+          <h3 class="text-xl font-bold text-slate-900 mb-4 line-clamp-2">
+            Accessibility in Your Virtual Sanctuary
+          </h3>
+          <div class="relative h-48 mb-4 rounded-xl overflow-hidden bg-slate-100">
+            <img src="image/pexels-artempodrez-7495881.jpg" alt="Digital setup" class="w-full h-full object-cover">
+            <span class="absolute bottom-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-sm">Design</span>
+          </div>
+          <div class="flex items-center gap-4 text-sm text-slate-500 font-medium mt-auto">
+            <span>Sep 15, 2026</span>
+            <span>• 4 min read</span>
+          </div>
+        </article>
+
+      </div>
+    </main>
+    <script type="module" src="/main.js"></script>
   </body>
 </html>
